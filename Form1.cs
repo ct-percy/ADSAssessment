@@ -52,7 +52,9 @@ namespace Assessment
                         string fileContent = streamReader.ReadToEnd();
 
                         //CHANGE DELIMITER HERE
-                        string[] content = fileContent.Trim().Split("'");
+                        char[] delimiter = [',', '\''];
+
+                        string[] content = fileContent.Trim().Split(delimiter);
 
                         var list = new List<String>(content);
 
